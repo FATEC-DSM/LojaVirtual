@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/global.css">
   <link rel="stylesheet" href="styles/section-gabriel.css">
+  <link rel="stylesheet" href="styles/card-buy.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
   <script src="scripts/section-gabriel.js" defer></script>
   <title>Loja de roupas</title>
@@ -27,43 +28,222 @@
         <a href="">Acessórios</a>
       </nav>
 
-      <div class="pesquisar">
-        <input type="text" name="pesquisar" placeholder="Pesquisar produto">
+      <div class="search_user">
+        <div class="search">
+          <input type="text" name="pesquisar" placeholder="Pesquisar produto">
+        </div>
+        <div class="user">
+          <a href="pages/formulario.html">
+            <i class="fa-regular fa-user"></i>
+            Usuário
+          </a>
+        </div>
       </div>
     </div>
   </header>
 
   <main>
     <div class="banner">
-      <img src="imagens/banner.jpg" alt="banner com as roupas da loja">
+      <img src="imagens/banner.jpg" alt="banner com as roupas da loja" loading="eager">
       <h1>Estilo que inspira, moda que transforma</h1>
     </div>
-    
-    <h2 id="street-wear-title">Coleção Street Wear Hits</h2>
+
     <section class="section-gabriel">
+      <h2 id="street-wear-title">Coleção Street Wear Hits</h2>
+
       <div class="wrapper-streetwear">
         <i id="left" class="fa-solid fa-angle-left"></i>
         <div class="carousel">
-          <img src="imagens/street-wear-carousel/img1.jpg" alt="street-wear-carousel">
-          <img src="imagens/street-wear-carousel/img2.jpg" alt="street-wear-carousel">
-          <img src="imagens/street-wear-carousel/img3.jpg" alt="street-wear-carousel">
-          <img src="imagens/street-wear-carousel/img4.jpg" alt="street-wear-carousel">
-          <img src="imagens/street-wear-carousel/img5.jpg" alt="street-wear-carousel">
-          <img src="imagens/street-wear-carousel/img6.jpg" alt="street-wear-carousel">
-          <img src="imagens/street-wear-carousel/img7.jpg" alt="street-wear-carousel">
-          <img src="imagens/street-wear-carousel/img8.jpg" alt="street-wear-carousel">
-          <img src="imagens/street-wear-carousel/img9.jpg" alt="street-wear-carousel">
-          <img src="imagens/street-wear-carousel/img10.jpg" alt="street-wear-carousel">
+          <img src="imagens/street-wear-carousel/img1.jpg" alt="street-wear-carousel" loading="lazy">
+          <img src="imagens/street-wear-carousel/img2.jpg" alt="street-wear-carousel" loading="lazy">
+          <img src="imagens/street-wear-carousel/img3.jpg" alt="street-wear-carousel" loading="lazy">
+          <img src="imagens/street-wear-carousel/img4.jpg" alt="street-wear-carousel" loading="lazy">
+          <img src="imagens/street-wear-carousel/img5.jpg" alt="street-wear-carousel" loading="lazy">
+          <img src="imagens/street-wear-carousel/img6.jpg" alt="street-wear-carousel" loading="lazy">
+          <img src="imagens/street-wear-carousel/img7.jpg" alt="street-wear-carousel" loading="lazy">
+          <img src="imagens/street-wear-carousel/img8.jpg" alt="street-wear-carousel" loading="lazy">
+          <img src="imagens/street-wear-carousel/img9.jpg" alt="street-wear-carousel" loading="lazy">
+          <img src="imagens/street-wear-carousel/img10.jpg" alt="street-wear-carousel" loading="lazy">
         </div>
         <i id="right" class="fa-solid fa-angle-right"></i>
       </div>
-
-
     </section>
 
+    <section class="grid">
+      <div class="img1 grid-content">
+        <a href="pages/catalogo.html">
+          <img src="imagens/street-wear-carousel/img3.jpg" alt="img1" loading="lazy">
+          <div class="footer">
+            <h4>Camisetas</h4>
+            <span>comprar</span>
+          </div>
+        </a>
+      </div>
+      <div class="img2 grid-content">
+        <a href="pages/catalogo.html">
+          <img src="imagens/grid/acessories.jpg" alt="img2" loading="lazy">
+          <div class="footer">
+            <h4>Acessórios</h4>
+            <span>comprar</span>
+          </div>
+        </a>
+      </div>
+      <div class="img3 grid-content">
+        <a href="pages/catalogo.html">
+          <img src="imagens/grid/pants.jpg" alt="img3" loading="lazy">
+          <div class="footer">
+            <h4>Calças</h4>
+            <span>comprar</span>
+          </div>
+        </a>
+      </div>
+      <div class="img4 grid-content">
+        <a href="pages/catalogo.html">
+          <img src="imagens/grid/shoes.jpg" alt="img4" loading="lazy">
+          <div class="footer">
+            <h4>Calçados</h4>
+            <span>comprar</span>
+          </div>
+        </a>
+      </div>
+      <div class="img5 grid-content">
+        <a href="pages/catalogo.html">
+          <img src="imagens/grid/jacket.jpg" alt="img5" loading="lazy">
+          <div class="footer">
+            <h4>Blusas</h4>
+            <span>comprar</span>
+          </div>
+        </a>
+      </div>
+    </section>
 
+    <section>
+      <h2>Os mais vendidos</h2>
+
+      <div class="items-more-sold">
+
+        <div class="card">
+          <div class="card-img">
+            <img src="imagens/grid/pants.jpg" alt="">
+          </div>
+          <div class="card-footer">
+            <span class="product-name">Calça Jeans rasgada e estilizada</span>
+            <span class="product-price">R$ 90.99</span>
+          </div>
+          <button class="btn-buy">comprar</button>
+        </div>
+
+        <div class="card">
+          <div class="card-img">
+            <img src="imagens/grid/pants.jpg" alt="">
+          </div>
+          <div class="card-footer">
+            <span class="product-name">Calça Jeans rasgada e estilizada</span>
+            <span class="product-price">R$ 90.99</span>
+          </div>
+          <button class="btn-buy">comprar</button>
+        </div>
+
+        <div class="card">
+          <div class="card-img">
+            <img src="imagens/grid/pants.jpg" alt="">
+          </div>
+          <div class="card-footer">
+            <span class="product-name">Calça Jeans rasgada e estilizada</span>
+            <span class="product-price">R$ 90.99</span>
+          </div>
+          <button class="btn-buy">comprar</button>
+        </div>
+
+        <div class="card">
+          <div class="card-img">
+            <img src="imagens/grid/pants.jpg" alt="">
+          </div>
+          <div class="card-footer">
+            <span class="product-name">Calça Jeans rasgada e estilizada</span>
+            <span class="product-price">R$ 90.99</span>
+          </div>
+          <button class="btn-buy">comprar</button>
+        </div>
+
+        <div class="card">
+          <div class="card-img">
+            <img src="imagens/grid/pants.jpg" alt="">
+          </div>
+          <div class="card-footer">
+            <span class="product-name">Calça Jeans rasgada e estilizada</span>
+            <span class="product-price">R$ 90.99</span>
+          </div>
+          <button class="btn-buy">comprar</button>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Nossos Clientes recomendam</h2>
+
+      <div class="feedbacks">
+        <article class="feedback">
+          <p>
+            Adorei comprar na sua loja! A entrega foi super rápida, e as roupas eram exatamente como eu esperava. A
+            qualidade é excelente. Vou definitivamente fazer mais compras aqui.
+          </p>
+          <h4>Maria S. - São Paulo</h4>
+        </article>
+        <article class="feedback">
+          <p>
+            Minha primeira compra aqui foi ótima! A variedade de roupas é incrível. As roupas que escolhi eram de alta
+            qualidade, e o atendimento ao cliente foi muito prestativo quando precisei de ajuda. Vou voltar com certeza.
+          </p>
+          <h4>Carla M. - Porto Alegre</h4>
+        </article>
+        <article class="feedback">
+          <p>
+            Gostei da experiência de compra, mas tive um pequeno problema com uma peça que encolheu na lavagem. O
+            atendimento ao cliente resolveu o problema de forma eficiente e me deu um reembolso. Ainda assim, gosto das
+            roupas da loja.
+          </p>
+          <h4>Lucas R. - Belo Horizonte</h4>
+        </article>
+        <article class="feedback">
+          <p>
+            Fiquei impressionada com a rapidez da entrega e a qualidade das roupas. Tudo se encaixou perfeitamente, e as
+            roupas eram tão bonitas quanto pareciam nas fotos. Excelente loja!
+          </p>
+          <h4>Isabela L. - Recife</h4>
+        </article>
+      </div>
+    </section>
+
+    <footer>
+      <h6>Loja Física</h6>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <span>Rua Pedro Rissato, 30, Vl. dos Remédios</span>
+              <span>Osasco - SP</span>
+            </td>
+            <td>
+              <span><b>Segunda à Sexta</b></span>
+              <span>10:00 às 19:00</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://maps.app.goo.gl/YmjYcudyNRXYEhxn8" class="link_maps" target="_blank">
+                abrir no maps
+              </a>
+            </td>
+            <td>
+              <span><b>Sábados</b></span>
+              <span>10:00 às 14:00</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </footer>
   </main>
-
 </body>
 
 </html>

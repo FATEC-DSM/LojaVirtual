@@ -1,9 +1,13 @@
 :root{
   --bg-color: #F5F5FA;
   --text: #222222;
+  --text-feedback: #424242;
 
   --btn-bg: #222222;
   --btn-text: #fff;
+  --grid-content-footer-text: #fff;
 
   --primary: #333B8F;
+
+  --space-between-sections-index: 50px;
 }
