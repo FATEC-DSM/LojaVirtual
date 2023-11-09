@@ -149,6 +149,7 @@ section:has(div.feedbacks) {
   color: var(--text-feedback);
   font-size: .8rem;
 }
+a { color: inherit; } 
 
 footer {
   display: flex;
