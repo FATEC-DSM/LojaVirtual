@@ -46,7 +46,7 @@ header{
 }
 
 .header-title{
-    color: black;
+    color: var(--bg-color);
     font-size: 2rem;
 }
 
@@ -122,6 +122,7 @@ footer{
     height: 40px;
     line-height: 40px;
     font-size: 1rem;
+    color: var(--bg-color);
 }
 
 
@@ -201,6 +202,7 @@ footer{
     background-color: var(--primary);
     padding-left: 20px;
     font-size: 1.2rem;    
+    color: var(--bg-color);
 }
 .records td{
     height: 50px;
