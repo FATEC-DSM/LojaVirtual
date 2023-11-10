@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Loja de roupas para a moda do dia a dia">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/styles/global.css">
+  <link rel="stylesheet" href="/styles/card-buy.css">
+  <link rel="stylesheet" href="/styles/cabecalho.css">
+  <link rel="stylesheet" href="/styles/camisas-page.css">
+  <link rel="stylesheet" href="/styles/product-card.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+  <title>Loja de Roupas - Camisas</title>
+</head>
+
+<body>
+  <header>
+    <div class="logo">Loja</div>
+    <div class="menu">
+      <div class="header-desktop">
+        <nav class="links">
+          <a href="">Camisas</a>
+          <a href="">Calças</a>
+          <a href="">camisas</a>
+          <a href="">Calçados</a>
+          <a href="">Acessórios</a>
+        </nav>
+      </div>
+
+      <div class="search_user">
+        <div class="search">
+          <input type="text" name="pesquisar" placeholder="Pesquisar produto">
+        </div>
+        <div class="user">
+          <a href="pages/formulario.html">
+            <i class="fa-regular fa-user"></i>
+            <span>Usuário</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div id="header-mobile" class="header-mobile">
+      <nav class="links">
+        <a href="">Camisas</a>
+        <a href="">Calças</a>
+        <a href="">Blusas</a>
+        <a href="">Calçados</a>
+        <a href="">Acessórios</a>
+      </nav>
+    </div>
+
+    <button class="open-close-menu" onclick="openCloseMenu()">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </header>
+
+  <main>
+    
+    <div class="camisas-banner">
+      <img src="https://images.unsplash.com/photo-1635650804483-2a77a8c9e728?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" loading="eager">
+      <h1>Vista-se com atitude, escolha <span>qualidade</span></h1>
+    </div>
+
+    <h2 class="camisas-title">Camisas</h2>
+
+    <section class="product-card">
+      <div class="container" id="ghostmane">
+          <div class="image">
+              <img src="/imagens/camisas/ghostmane - white.jpg" alt="">
+          </div>
+          <div class="card-content">
+              <div class="wrapper">
+                  <div class="title">Ghostmane</div>
+                  <p>Men's runnig tshirt</p>
+                  <div class="price">$29.99</div>
+                  <div class="content size">
+                      <div class="name size-name">tamanho</div>
+                      <div class="size-value">
+                          <span class="active">P</span>
+                          <span>M</span>
+                          <span>G</span>
+                          <span>GG</span>
+                      </div>
+                  </div>
+                  <div class="content colour">
+                      <div class="name colour-name">cor</div>
+                      <div class="colour-value">
+                          <span class="white active" data-color="white" data-img="/imagens/camisas/ghostmane - white.jpg"></span>
+                          <span class="black" data-color="black" data-img="/imagens/camisas/ghostmane - black.jpg"></span>
+                          <span class="red" data-color="red" data-img="/imagens/camisas/ghostmane - red.jpg"></span>
+                          <span class="yellow" data-color="yellow" data-img="/imagens/camisas/ghostmane - yellow.jpg"></span>
+                      </div>
+                  </div>
+                  <div class="btns">
+                      <button>Comprar</button>
+                      <button>Adicionar</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="container" id="doom">
+          <div class="image">
+              <img src="/imagens/camisas/doom - white.jpg" alt="">
+          </div>
+          <div class="card-content">
+              <div class="wrapper">
+                  <div class="title">Doom</div>
+                  <p>Men's runnig tshirt</p>
+                  <div class="price">$29.99</div>
+                  <div class="content size">
+                      <div class="name size-name">tamanho</div>
+                      <div class="size-value">
+                          <span class="active">P</span>
+                          <span>M</span>
+                          <span>G</span>
+                          <span>GG</span>
+                      </div>
+                  </div>
+                  <div class="content colour">
+                      <div class="name colour-name">cor</div>
+                      <div class="colour-value">
+                          <span class="white active" data-color="white" data-img="/imagens/camisas/doom - white.jpg"></span>
+                          <span class="white" data-color="off-white" data-img="/imagens/camisas/doom - off white.jpg"></span>
+                          <span class="gray" data-color="gray" data-img="/imagens/camisas/doom - gray.jpg"></span>
+                      </div>
+                  </div>
+                  <div class="btns">
+                      <button>Comprar</button>
+                      <button>Adicionar</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="container" id="ladra">
+          <div class="image">
+              <img src="/imagens/camisas/ladra - white.jpg" alt="">
+          </div>
+          <div class="card-content">
+              <div class="wrapper">
+                  <div class="title">Ladra</div>
+                  <p>Streat Wear</p>
+                  <div class="price">$29.99</div>
+                  <div class="content size">
+                      <div class="name size-name">tamanho</div>
+                      <div class="size-value">
+                          <span class="active">P</span>
+                          <span>M</span>
+                          <span>G</span>
+                          <span>GG</span>
+                      </div>
+                  </div>
+                  <div class="content colour">
+                      <div class="name colour-name">cor</div>
+                      <div class="colour-value">
+                          <span class="white active" data-color="white" data-img="/imagens/camisas/ladra - white.jpg"></span>
+                          <span class="black" data-color="black" data-img="/imagens/camisas/ladra - black.jpg"></span>
+                          <span class="gray" data-color="gray" data-img="/imagens/camisas/ladra - gray.jpg"></span>
+                      </div>
+                  </div>
+                  <div class="btns">
+                      <button>Comprar</button>
+                      <button>Adicionar</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="container" id="mushroom">
+          <div class="image">
+              <img src="/imagens/camisas/mushroom - black.jpg" alt="">
+          </div>
+          <div class="card-content">
+              <div class="wrapper">
+                  <div class="title">Doom</div>
+                  <p>The Vibe's Colection</p>
+                  <div class="price">$39.99</div>
+                  <div class="content size">
+                      <div class="name size-name">tamanho</div>
+                      <div class="size-value">
+                          <span class="active">P</span>
+                          <span>M</span>
+                          <span>G</span>
+                          <span>GG</span>
+                      </div>
+                  </div>
+                  <div class="content colour">
+                      <div class="name colour-name">cor</div>
+                      <div class="colour-value">
+                          <span class="white" data-color="white" data-img="/imagens/camisas/mushroom - white.jpg"></span>
+                          <span class="black active" data-color="black" data-img="/imagens/camisas/mushroom - black.jpg"></span>
+                      </div>
+                  </div>
+                  <div class="btns">
+                      <button>Comprar</button>
+                      <button>Adicionar</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="container" id="mushroom2">
+        <div class="image">
+            <img src="/imagens/camisas/mushroom 2 - white.jpg" alt="">
+        </div>
+        <div class="card-content">
+            <div class="wrapper">
+                <div class="title">Mushroom II</div>
+                <p>The Vibe's Colection</p>
+                <div class="price">$39.99</div>
+                <div class="content size">
+                    <div class="name size-name">tamanho</div>
+                    <div class="size-value">
+                        <span class="active">P</span>
+                        <span>M</span>
+                        <span>G</span>
+                        <span>GG</span>
+                    </div>
+                </div>
+                <div class="content colour">
+                    <div class="name colour-name">cor</div>
+                    <div class="colour-value">
+                        <span class="white active" data-color="white" data-img="/imagens/camisas/mushroom 2 - white.jpg"></span>
+                        <span class="black" data-color="black" data-img="/imagens/camisas/mushroom 2 - black.jpg"></span>
+                    </div>
+                </div>
+                <div class="btns">
+                    <button>Comprar</button>
+                    <button>Adicionar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="ursinho">
+      <div class="image">
+          <img src="/imagens/camisas/ursinho - white.jpg" alt="">
+      </div>
+      <div class="card-content">
+          <div class="wrapper">
+              <div class="title">Ursinho</div>
+              <p>Ted-shirt</p>
+              <div class="price">$29.99</div>
+              <div class="content size">
+                  <div class="name size-name">tamanho</div>
+                  <div class="size-value">
+                      <span class="active">P</span>
+                      <span>M</span>
+                      <span>G</span>
+                      <span>GG</span>
+                  </div>
+              </div>
+              <div class="content colour">
+                  <div class="name colour-name">cor</div>
+                  <div class="colour-value">
+                      <span class="white active" data-color="white" data-img="/imagens/camisas/ursinho - white.jpg"></span>
+                      <span class="black" data-color="black" data-img="/imagens/camisas/ursinho - black.jpg"></span>
+                      <span class="gray" data-color="gray" data-img="/imagens/camisas/ursinho - gray.jpg"></span>
+                  </div>
+              </div>
+              <div class="btns">
+                  <button>Comprar</button>
+                  <button>Adicionar</button>
+              </div>
+          </div>
+      </div>
+  </div>
+    
+  </section>
+
+  <script>
+          $(".colour-value span").click(function(){
+              var productCard = $(this).closest('.container');
+              $(".colour-value span", productCard).removeClass("active");
+              $(this).addClass("active");
+              $(".image img", productCard).attr("src", $(this).attr("data-img"));
+          });
+
+          $(".size-value span").click(function(){
+              var productCard = $(this).closest('.container');
+              $(".size-value span", productCard).removeClass("active");
+              $(this).addClass("active");
+          });
+
+  </script>
+
+
+
+    <footer>
+      <h6>Loja Física</h6>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <span>Rua Pedro Rissato, 30, Vl. dos Remédios</span>
+              <span>Osasco - SP</span>
+            </td>
+            <td>
+              <span><b>Segunda à Sexta</b></span>
+              <span>10:00 às 19:00</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://maps.app.goo.gl/YmjYcudyNRXYEhxn8" class="link_maps" target="_blank">
+                abrir no maps
+              </a>
+            </td>
+            <td>
+              <span><b>Sábados</b></span>
+              <span>10:00 às 14:00</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </footer>
+  </main>
+
+  <script src="scripts/section-gabriel.js" defer></script>
+  <script src="scripts/cabecalho.js" defer></script>
+
+</body>
+
+</html>
