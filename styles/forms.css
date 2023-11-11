@@ -11,15 +11,21 @@ input{
   align-items: center;
 }
 
+.logo{
+  width: 80px;
+  height: 70px;
+  padding: 0;
+  margin: 0;
+}
 .container{
   width: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
   display: flex;
-  margin: 100px 0px;
+  margin: 120px 0px;
   padding: 40px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 5px 10px rgba(0,0,0, .2);
   background-color: var(--bg-color);
 
 }
