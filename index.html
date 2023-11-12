@@ -12,16 +12,36 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles/global.css">
-  <link rel="stylesheet" href="styles/main-page.css">
-
-  <link rel="stylesheet" href="styles/carousel.css">
-  <link rel="stylesheet" href="styles/card-buy.css">
   <link rel="stylesheet" href="styles/cabecalho.css">
+  <script src="scripts/principal.js" defer></script>
+
+
+  <!-- Página principal -->
+  <link rel="stylesheet" href="styles/principal-page/carousel.css">
+  <link rel="stylesheet" href="styles/principal-page/more-sold.css">
+  <link rel="stylesheet" href="styles/principal-page/principal.css">
+  <!-- Página principal -->
+
+  <!-- Página camisas -->
+  <link rel="stylesheet" href="/styles/camisas-page/camisas-page.css">
+  <link rel="stylesheet" href="/styles/camisas-page/product-card.css">
+
+  <!-- Página camisas -->
+
+  <!-- Página Forms -->
+  <link rel="stylesheet" href="/styles/forms-page/forms.css">
+  <script src="/scripts/script-forms.js" defer></script>
+  <!-- Página Forms -->
+
+  <!-- Página Estoque -->
+  <link rel="stylesheet" href="/styles/stock.css">
+  <script src="/scripts/stock.js" defer></script>
+  <!-- Página Estoque -->
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
   <script src="scripts/carousel.js" defer></script>
   <script src="scripts/cabecalho.js" defer></script>
-  
+
 
   <title>Loja de roupas</title>
 </head>
@@ -29,17 +49,18 @@
 <body>
   <header>
     <div class="logo">
-      <!-- <a href="/index.html"><img src="/imagens/logo/logo-favicon.svg" alt="Logo da loja"></a> -->
-      <a href="/index.html"><img src="imagens/logo/logo-favicon.png" alt="Logo da loja"></a>
+      <a href="/index.html">
+        <img src="imagens/logo/logo-favicon.png" alt="Logo da loja">
+      </a>
     </div>
     <div class="menu">
       <div class="header-desktop">
         <nav class="links">
-          <a href="pages/camisas.html">Camisas</a>
-          <a href="">Calças</a>
-          <a href="">Blusas</a>
-          <a href="">Calçados</a>
-          <a href="">Acessórios</a>
+          <a onclick="loadTemplate('pages/camisas.html')">Camisas</a>
+          <a onclick="loadTemplate('pages/camisas.html')">Calças</a>
+          <a onclick="loadTemplate('pages/camisas.html')">Blusas</a>
+          <a onclick="loadTemplate('pages/camisas.html')">Calçados</a>
+          <a onclick="loadTemplate('pages/camisas.html')">Acessórios</a>
         </nav>
       </div>
 
@@ -48,7 +69,7 @@
           <input type="text" name="pesquisar" placeholder="Pesquisar produto">
         </div>
         <div class="user">
-          <a href="pages/formulario.html">
+          <a onclick="loadTemplate('pages/form.html')">
             <i class="fa-regular fa-user"></i>
             <span>Usuário</span>
           </a>
@@ -58,11 +79,11 @@
 
     <div id="header-mobile" class="header-mobile">
       <nav class="links">
-        <a href="pages/camisas.html">Camisas</a>
-        <a href="">Calças</a>
-        <a href="">Blusas</a>
-        <a href="">Calçados</a>
-        <a href="">Acessórios</a>
+        <a onclick="loadTemplate('pages/camisas.html')">Camisas</a>
+        <a onclick="loadTemplate('pages/camisas.html')">Calças</a>
+        <a onclick="loadTemplate('pages/camisas.html')">Blusas</a>
+        <a onclick="loadTemplate('pages/camisas.html')">Calçados</a>
+        <a onclick="loadTemplate('pages/camisas.html')">Acessórios</a>
       </nav>
     </div>
 
@@ -71,7 +92,7 @@
     </button>
   </header>
 
-  <main>
+  <main id="main">
     <div class="banner">
       <img src="imagens/banner.jpg" alt="banner com as roupas da loja" loading="eager">
       <h1>Estilo que inspira, moda que transforma</h1>
@@ -85,13 +106,11 @@
         <div class="carousel">
           <img src="imagens/street-wear-carousel/img1.jpg" alt="street-wear-carousel" loading="lazy">
           <img src="imagens/street-wear-carousel/img2.jpg" alt="street-wear-carousel" loading="lazy">
-          <img src="imagens/street-wear-carousel/img3.jpg" alt="street-wear-carousel" loading="lazy">
           <img src="imagens/street-wear-carousel/img4.jpg" alt="street-wear-carousel" loading="lazy">
           <img src="imagens/street-wear-carousel/img5.jpg" alt="street-wear-carousel" loading="lazy">
           <img src="imagens/street-wear-carousel/img6.jpg" alt="street-wear-carousel" loading="lazy">
           <img src="imagens/street-wear-carousel/img7.jpg" alt="street-wear-carousel" loading="lazy">
           <img src="imagens/street-wear-carousel/img8.jpg" alt="street-wear-carousel" loading="lazy">
-          <img src="imagens/street-wear-carousel/img9.jpg" alt="street-wear-carousel" loading="lazy">
           <img src="imagens/street-wear-carousel/img10.jpg" alt="street-wear-carousel" loading="lazy">
         </div>
         <i id="right" class="fa-solid fa-angle-right"></i>
@@ -100,8 +119,8 @@
 
     <section class="grid">
       <div class="img1 grid-content">
-        <a href="pages/camisas.html">
-          <img src="imagens/street-wear-carousel/img3.jpg" alt="img1" loading="lazy">
+        <a onclick="loadTemplate('pages/camisas.html')">
+          <img src="imagens/grid/camisa.jpg" alt="img1" loading="lazy">
           <div class="footer">
             <h4>Camisetas</h4>
             <span>comprar</span>
@@ -109,7 +128,7 @@
         </a>
       </div>
       <div class="img2 grid-content">
-        <a href="pages/catalogo.html">
+        <a onclick="loadTemplate('pages/camisas.html')">
           <img src="imagens/grid/acessories.jpg" alt="img2" loading="lazy">
           <div class="footer">
             <h4>Acessórios</h4>
@@ -118,7 +137,7 @@
         </a>
       </div>
       <div class="img3 grid-content">
-        <a href="pages/catalogo.html">
+        <a onclick="loadTemplate('pages/camisas.html')">
           <img src="imagens/grid/pants.jpg" alt="img3" loading="lazy">
           <div class="footer">
             <h4>Calças</h4>
@@ -127,7 +146,7 @@
         </a>
       </div>
       <div class="img4 grid-content">
-        <a href="pages/catalogo.html">
+        <a onclick="loadTemplate('pages/camisas.html')">
           <img src="imagens/grid/shoes.jpg" alt="img4" loading="lazy">
           <div class="footer">
             <h4>Calçados</h4>
@@ -136,7 +155,7 @@
         </a>
       </div>
       <div class="img5 grid-content">
-        <a href="pages/catalogo.html">
+        <a onclick="loadTemplate('pages/camisas.html')">
           <img src="imagens/grid/jacket.jpg" alt="img5" loading="lazy">
           <div class="footer">
             <h4>Blusas</h4>
@@ -150,60 +169,32 @@
       <h2>Os mais vendidos</h2>
 
       <div class="items-more-sold">
-
-        <div class="card">
-          <div class="card-img">
-            <img src="imagens/grid/pants.jpg" alt="">
-          </div>
-          <div class="card-footer">
-            <span class="product-name">Calça Jeans rasgada e estilizada</span>
-            <span class="product-price">R$ 90.99</span>
-          </div>
-          <button class="btn-buy">comprar</button>
+        <div class="card" style="--bg-img-card: url(../../imagens/grid/pants.jpg);">
+          <a onclick="loadTemplate('pages/camisas.html')">
+            <div class="card-footer">
+              <span class="product-name">Calça Jeans rasgada e estilizada</span>
+              <span class="product-price">R$ 90.99</span>
+              <span class="btn-buy">comprar</span>
+            </div>
+          </a>
         </div>
-
-        <div class="card">
-          <div class="card-img">
-            <img src="imagens/grid/pants.jpg" alt="">
-          </div>
-          <div class="card-footer">
-            <span class="product-name">Calça Jeans rasgada e estilizada</span>
-            <span class="product-price">R$ 90.99</span>
-          </div>
-          <button class="btn-buy">comprar</button>
+        <div class="card" style="--bg-img-card: url(../../imagens/street-wear-carousel/img8.jpg);">
+          <a onclick="loadTemplate('pages/camisas.html')">
+            <div class="card-footer">
+              <span class="product-name">Moletom Branco Samurai</span>
+              <span class="product-price">R$ 350.99</span>
+              <span class="btn-buy">comprar</span>
+            </div>
+          </a>
         </div>
-
-        <div class="card">
-          <div class="card-img">
-            <img src="imagens/grid/pants.jpg" alt="">
-          </div>
-          <div class="card-footer">
-            <span class="product-name">Calça Jeans rasgada e estilizada</span>
-            <span class="product-price">R$ 90.99</span>
-          </div>
-          <button class="btn-buy">comprar</button>
-        </div>
-
-        <div class="card">
-          <div class="card-img">
-            <img src="imagens/grid/pants.jpg" alt="">
-          </div>
-          <div class="card-footer">
-            <span class="product-name">Calça Jeans rasgada e estilizada</span>
-            <span class="product-price">R$ 90.99</span>
-          </div>
-          <button class="btn-buy">comprar</button>
-        </div>
-
-        <div class="card">
-          <div class="card-img">
-            <img src="imagens/grid/pants.jpg" alt="">
-          </div>
-          <div class="card-footer">
-            <span class="product-name">Calça Jeans rasgada e estilizada</span>
-            <span class="product-price">R$ 90.99</span>
-          </div>
-          <button class="btn-buy">comprar</button>
+        <div class="card" style="--bg-img-card: url(../../imagens/grid/jacket.jpg);">
+          <a onclick="loadTemplate('pages/camisas.html')">
+            <div class="card-footer">
+              <span class="product-name">Jaqueta Sarja </span>
+              <span class="product-price">R$ 199.99</span>
+              <span class="btn-buy">comprar</span>
+            </div>
+          </a>
         </div>
       </div>
     </section>
@@ -243,37 +234,35 @@
         </article>
       </div>
     </section>
-
-    <footer>
-      <h6>Loja Física</h6>
-      <table>
-        <tbody>
-          <tr>
-            <td>
-              <span>Rua Pedro Rissato, 30, Vl. dos Remédios</span>
-              <span>Osasco - SP</span>
-            </td>
-            <td>
-              <span><b>Segunda à Sexta</b></span>
-              <span>10:00 às 19:00</span>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="https://maps.app.goo.gl/YmjYcudyNRXYEhxn8" class="link_maps" target="_blank">
-                abrir no maps
-              </a>
-            </td>
-            <td>
-              <span><b>Sábados</b></span>
-              <span>10:00 às 14:00</span>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <a href="pages/estoque.html">Estoque</a>
-    </footer>
   </main>
+
+  <footer>
+    <div style="width: 100px; height: 100px;">
+      <img src="imagens/logo/logo-favicon.png" alt="">
+    </div>
+
+    <div style="text-align: center;">
+      <span>Rua Pedro Rissato, 30, Vl. dos Remédios</span>
+      <span>Osasco - SP</span>
+      <div>
+        <a href="https://maps.app.goo.gl/YmjYcudyNRXYEhxn8" class="link_maps" target="_blank">
+          abrir no maps
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <div>
+        <span><b>Segunda à Sexta</b></span>
+        <span>10:00 às 19:00</span>
+      </div>
+      <div>
+        <span><b>Sábados</b></span>
+        <span>10:00 às 14:00</span>
+      </div>
+    </div>
+    <a onclick="loadTemplate('pages/estoque.html')">Estoque</a>
+  </footer>
 </body>
 
 </html>

@@ -1,0 +1,75 @@
+<div class="container-centralizado">
+  <div class="container">
+    <div class="form-image">
+      <img src="/imagens/area-login/undraw_add_user_re_5oib.svg" alt="Ilustração de um cadastro de usuário">
+    </div>
+    <div class="form">
+      <div class="form-header">
+        <div class="title">
+          <h1>Cadastro de usuário</h1>
+        </div>
+      </div>
+      <form method="get" action=".">
+
+        <div class="input-group">
+
+          <div class="input">
+            <label for="name">Nome</label>
+            <input type="text" id="name" required placeholder="Digite seu nome">
+          </div>
+          <div class="input">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" required placeholder="Email@gmail.com">
+          </div>
+          <div class="input">
+            <label for="cpf">CPF</label>
+            <input type="number" id="cpf" maxlength="11" required placeholder="000.000.000-00">
+          </div>
+          <div class="input">
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" required>
+          </div>
+          <div class="input">
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" required placeholder="(00)00000-0000">
+          </div>
+          <div class="input">
+            <label for="data">Data de nascimento</label>
+            <input type="date" id="data">
+          </div>
+          <div class="input">
+            <label for="cep">Cep</label>
+            <input name="cep" type="text" id="cep" value="" size="10" maxlength="9" onblur="pesquisacep(this.value);"
+              placeholder="ex: 10101-101" />
+          </div>
+          <div class="input">
+            <label for="rua">Rua</label>
+            <input name="rua" type="text" id="rua" size="40" />
+          </div>
+          <div class="input">
+            <label for="bairro">Bairro</label>
+            <input name="bairro" type="text" id="bairro" size="40" />
+          </div>
+          <div class="input-city-state">
+            <div class="input-city">
+              <label for="cidade">Cidade</label>
+              <input name="cidade" type="text" id="cidade" size="40" />
+            </div>
+            <div class="input-state">
+              <label for="uf">Estado</label>
+              <input name="uf" type="text" id="uf" size="2" />
+            </div>
+          </div>
+        </div>
+        <div class="button">
+          <button>Enviar</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  $('#cep').mask('00000-000');
+</script>

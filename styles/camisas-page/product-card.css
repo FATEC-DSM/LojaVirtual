@@ -8,7 +8,7 @@
   width: 100%;
 }
 
-.container{
+.container-card{
   position: relative;
   border-radius: 10px;
   margin: 10px;
@@ -20,11 +20,11 @@
   transition: all 0.3s ease;
 }
 
-.container:hover{
+.container-card:hover{
   box-shadow: 0 0 15px 0 rgba(0,0,0,0.2);
 }
 
-.container .image{
+.container-card .image{
   position: absolute;
   top: 0;
   left: 0;
@@ -32,18 +32,18 @@
   width: 100%;
 }
 
-.container .image img{
+.container-card .image img{
   height: 100%;
   width: 100%;
   object-fit: cover;
   transition: all 0.3s ease;
 }
 
-.container:hover .image img{
+.container-card:hover .image img{
   transform: scale(1.1);
 }
 
-.container .card-content{
+.container-card .card-content{
   height: 100%;
   width: 100%;
   position: relative;
@@ -61,7 +61,7 @@
   transition: bottom 0.3s ease;
 }
 
-.container:hover .wrapper{
+.container-card:hover .wrapper{
   bottom: 0px;
 
 }
