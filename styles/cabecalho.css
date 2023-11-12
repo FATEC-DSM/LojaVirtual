@@ -120,12 +120,25 @@ header .user a {
     white-space: none;
   }
 
-
   .header-desktop {
     display: none;
   }
 
   header .user a span{
     display: none;
+  }
+
+  .search_user {
+    gap: 0;
+    width: 100%;
+    justify-content: flex-end;
+    padding-left: 10px;
+    margin-inline: 10px;
+  }
+}
+
+@media (max-width: 425px) {
+  header {
+    padding: 10px;
   }
 }

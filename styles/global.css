@@ -1,4 +1,4 @@
-@import url('./color.css');
+@import url('./root.css');
 
 *{
   padding: 0;
@@ -15,11 +15,13 @@ body{
   max-width: 1920px;
   margin: 0 auto;
 }
+
 .logo{
   width: 60px;
   height: 60px;
   padding: 0;
   margin: 0;
+  object-fit: contain;
 }
 
 img {
@@ -43,25 +45,33 @@ footer {
   align-items: center;
   justify-content: space-around;
   padding: 30px 20px;
+  gap: 20px;
   border-top: 1px solid #ccc;
 }
 
-footer h6 {
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  font-weight: 300;
-  font-size: 1.5rem;
-}
-footer tbody tr td{
-  vertical-align: top;
-  padding-right: 30px;
+footer img {
+  object-fit: contain;
 }
 
-footer tbody span{
-  display: block;
+@media (max-width: 765px) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
-footer tbody .link_maps {
-  color: inherit;
-  text-transform: uppercase;
+@media (max-width: 900px){
+  .logo{
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+  section {
+    padding-inline: 25px;
+  }
 }

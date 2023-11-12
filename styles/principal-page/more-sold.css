@@ -1,0 +1,65 @@
+section:has(div.items-more-sold){
+  margin: calc(var(--space-between-sections-index) + 100px) 0px;
+}
+
+.items-more-sold {
+  display: flex;
+  align-items: top;
+  justify-content: space-between;
+  margin-top: 50px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  width: 100%;
+  max-width: 400px;
+  min-width: 250px;
+  border-radius: 4px;
+  height: 500px;
+  background: linear-gradient(rgba(0,0,0,0.2) 70%, rgba(0,0,0,0.9)),
+  var(--bg-img-card);
+  background-position: center;
+  background-size: cover;
+  flex: 1;
+}
+
+.card .card-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 12px;
+  min-height: 100%;
+  color: white;
+}
+.card .card-footer span:last-child {
+  font-size: .8rem;
+  text-decoration: underline;
+}
+
+.card .card-footer .product-price {
+  font-size: .9rem;
+}
+
+.card .btn-buy {
+  background-color: transparent;
+  border: none;
+  color: var(--btn-text);
+  cursor: pointer;
+  text-align: left;
+  text-decoration: solid;
+}
+
+@media (max-width: 765px){
+  .items-more-sold {
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 425px){
+  section:has(div.items-more-sold){
+    margin: calc(var(--space-between-sections-index)) 0px;
+  }
+}
