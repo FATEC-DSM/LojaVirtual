@@ -16,24 +16,6 @@ function loadTemplate(caminhoDeArquivo) {
       )[1];
 
       definirTituloPagina(nomeArquivo);
+
     });
-}
-
-function definirTituloPagina(nomeArquivo) {
-  switch (nomeArquivo) {
-    case "camisas.html":
-      document.title = "Loja de roupas - Camisas";
-      break;
-
-    case "form.html":
-      document.title = "Loja de roupas - Cadastro de usuário";
-      break;
-
-    case "estoque.html":
-      document.title = "Loja de Roupas - Estoque";
-      break;
-
-    default:
-      break;
-  }
 }
