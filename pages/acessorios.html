@@ -336,6 +336,7 @@
 </section>
 
 <script>
+  
     // Select all filter buttons and filterable cards
   const filterButtons = document.querySelectorAll(".filter-buttons button");
   const filterableCards = document.querySelectorAll(".filterable-cards .card");
@@ -358,4 +359,8 @@
       }
     });
   };
+
+  // Add click event listener to each filter button
+  filterButtons.forEach(button => button.addEventListener("click", filterCards));
+  
 </script>
