@@ -11,7 +11,7 @@ input{
   align-items: center;
 }
 
-.container{
+.container-form{
   width: 80%;
   display: flex;
   justify-content: center;
@@ -102,7 +102,7 @@ input[type=number]::-webkit-outer-spin-button {
   .form-image{
     display: none;
   }
-  .container{
+  .container-form{
     width: 40%;
   }
 }
@@ -111,7 +111,7 @@ input[type=number]::-webkit-outer-spin-button {
   h1{
     font-size: 25px;
   }
-  .container{
+  .container-form{
     width: 60%;
   }
 }
@@ -127,7 +127,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 @media screen and (max-width:418px){
-  .container{
+  .container-form{
     width: 100%;
     display: flex;
     justify-content: center;
