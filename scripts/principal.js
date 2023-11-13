@@ -1,18 +1,29 @@
 function loadTemplate(caminhoDeArquivo) {
   const main = document.querySelector("#main");
+
   fetch(caminhoDeArquivo)
     .then(resp => resp.text())
     .then(data => {
-      main.innerHTML = data;
+      // Use DOMParser para criar um novo documento HTML a partir do texto recebido
+      const parser = new DOMParser();
+      const novoDocumento = parser.parseFromString(data, "text/html");
 
-      const nomeArquivo = caminhoDeArquivo.split(
-        "/",
-        caminhoDeArquivo.length - 1
-      )[1];
+      // Substitua o conteúdo da #main pelo novo conteúdo
+      main.innerHTML = novoDocumento.body.innerHTML;
 
+      // Execute scripts no novo conteúdo
+      const scripts = main.querySelectorAll("script");
+      scripts.forEach(script => {
+        const novoScript = document.createElement("script");
+        novoScript.textContent = script.textContent;
+        document.head.appendChild(novoScript).parentNode.removeChild(novoScript);
+      });
+
+      const nomeArquivo = caminhoDeArquivo.split("/", caminhoDeArquivo.length - 1)[1];
       definirTituloPagina(nomeArquivo);
     });
 }
+
 
 function definirTituloPagina(nomeArquivo) {
   switch (nomeArquivo) {
