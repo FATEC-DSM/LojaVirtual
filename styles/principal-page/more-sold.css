@@ -11,7 +11,7 @@ section:has(div.items-more-sold){
   gap: 20px;
 }
 
-.card {
+.card-sold {
   width: 100%;
   max-width: 400px;
   min-width: 250px;
@@ -24,7 +24,7 @@ section:has(div.items-more-sold){
   flex: 1;
 }
 
-.card .card-footer {
+.card-sold .card-footer {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -32,16 +32,16 @@ section:has(div.items-more-sold){
   min-height: 100%;
   color: white;
 }
-.card .card-footer span:last-child {
+.card-sold .card-footer span:last-child {
   font-size: .8rem;
   text-decoration: underline;
 }
 
-.card .card-footer .product-price {
+.card-sold .card-footer .product-price {
   font-size: .9rem;
 }
 
-.card .btn-buy {
+.card-sold .btn-buy {
   background-color: transparent;
   border: none;
   color: var(--btn-text);
