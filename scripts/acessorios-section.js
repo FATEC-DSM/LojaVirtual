@@ -1,25 +1,25 @@
-// Select all filter buttons and filterable cards
-const filterButtons = document.querySelectorAll(".filter-buttons button");
-const filterableCards = document.querySelectorAll(".filterable-cards .card");
+// Seleciona todos os botões de filtro e cartões filtráveis
+var filterButtons = $(".filter-buttons button");
+var filterableCards = $(".filterable-cards .card");
 
-// Define the filterCards function
-const filterCards = e => {
-  document.querySelector(".active").classList.remove("active");
-  e.target.classList.add("active");
+// Define a função filterCards
+function filterCards() {
+  $(".active").removeClass("active");
+  $(this).addClass("active");
 
-  // Iterate over each filterable card
-  filterableCards.forEach(card => {
-    // Add "hide" class to hide the card initially
-    card.classList.add("hide");
-    // Check if the card matches the selected filter or "all" is selected
+  // Itera sobre cada cartão filtrável
+  filterableCards.each(function() {
+    // Adiciona a classe "hide" para esconder o cartão inicialmente
+    $(this).addClass("hide");
+    // Verifica se o cartão corresponde ao filtro selecionado ou se "all" está selecionado
     if (
-      card.dataset.name === e.target.dataset.name ||
-      e.target.dataset.name === "all"
+      $(this).data("name") === $(event.target).data("name") ||
+      $(event.target).data("name") === "all"
     ) {
-      card.classList.remove("hide");
+      $(this).removeClass("hide");
     }
   });
-};
+}
 
-// Add click event listener to each filter button
-filterButtons.forEach(button => button.addEventListener("click", filterCards));
+// Adiciona um ouvinte de evento de clique a cada botão de filtro
+filterButtons.click(filterCards);

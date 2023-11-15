@@ -12,11 +12,13 @@ function loadTemplate(caminhoDeArquivo) {
       main.innerHTML = novoDocumento.body.innerHTML;
 
       // Execute scripts no novo conteúdo
-      const scripts = main.querySelectorAll("script");
-      scripts.forEach(script => {
-        const novoScript = document.createElement("script");
-        novoScript.textContent = script.textContent;
-        document.head.appendChild(novoScript).parentNode.removeChild(novoScript);
+      const scripts = Array.from(novoDocumento.scripts);
+      scripts.forEach(oldScript => {
+        const newScript = document.createElement("script");
+        Array.from(oldScript.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value));
+        newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+        main.appendChild(newScript);
+        oldScript.parentNode.removeChild(oldScript);
       });
 
       const nomeArquivo = caminhoDeArquivo.split("/", caminhoDeArquivo.length - 1)[1];
