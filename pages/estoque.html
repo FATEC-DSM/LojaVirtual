@@ -63,20 +63,38 @@
   </table>
   <div class="modal" id="modal">
     <div class="modal-content">
-      <header class="modal-header">
+      <div class="modal-header">
         <h2>Novo Produto</h2>
         <span class="modal-close" id="modalClose">&#10006;</span>
-      </header>
+      </div>
       <form class="modal-form">
         <input type="text" class="modal-field" placeholder="Nome do produto">
         <input type="email" class="modal-field" placeholder="Preço Unitário">
         <input type="text" class="modal-field" placeholder="Quantidade">
       </form>
-      <footer class="modal-footer">
+      <div class="modal-footer">
         <button class="btn green">Salvar</button>
         <button class="btn blue">Cancelar</button>
-      </footer>
+      </div>
     </div>
   </div>
 </div>
 
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script>
+  var modal = $("#modal");
+  var cadastrarCliente = $("#cadastrarCliente");
+  var modalClose = $("#modalClose");
+
+  const openModal = () => {
+    modal.addClass("active");
+  }
+
+  const closeModal = () => {
+    modal.removeClass("active");
+  }
+
+  cadastrarCliente.click(openModal);
+  modalClose.click(closeModal);
+
+</script>

@@ -5,7 +5,7 @@ arrowIcons = document.querySelectorAll(".wrapper-streetwear i");
 let isDragStart = false,
   prevPageX,
   prevScrollLeft;
-let firstImgWidth = firstImg.clientWidth + 10; // getting fisrt img width & adding 10 margin value
+let firstImgWidth = firstImg.clientWidth + 10; // getting first img width & adding 10 margin value
 
 arrowIcons.forEach(icon => {
   icon.addEventListener("click", () => {
